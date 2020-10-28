@@ -1,3 +1,7 @@
 {
-  "item.biohazard.green_herb": "Green Herb"
+  "item.biohazard.green_herb": "Green Herb",
+  "item.biohazard.red_herb": "Red Herb",
+  "item.biohazard.blue_herb": "Blue Herb",
+  "item.biohazard.mixed_herbs_gg": "Mixed Herbs (G+G)",
+  "item.biohazard.mixed_herbs_ggg": "Mixed Herbs (G+G+G)"
 }

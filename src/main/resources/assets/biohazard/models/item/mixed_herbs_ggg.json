@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "biohazard:items/mixed_herbs",
+    "layer1": "biohazard:items/ggg"
+  }
+}

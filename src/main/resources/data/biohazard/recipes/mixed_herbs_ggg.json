@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "biohazard:green_herb"
+    }
+  },
+  "result":
+  {
+    "item": "biohazard:mixed_herbs_ggg",
+    "count": 1
+  }
+}
