@@ -1,5 +1,6 @@
 package com.skullmangames.biohazard;
 
+import com.skullmangames.biohazard.util.RegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,6 +26,8 @@ public class Biohazard
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
+    public static final String MODID = "biohazard";
+
     public Biohazard() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -34,6 +37,8 @@ public class Biohazard
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+
+        RegistryHandler.Init();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
