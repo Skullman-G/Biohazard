@@ -1,7 +1,7 @@
 {
   "homepage": "<homepage/download page for your mod>",
   "1.16.3": {
-    "<0.1.0>": "<changelog for this version>"
+    "<0.1.0>": "https://raw.githubusercontent.com/Skullman-G/Biohazard/main/changelog.txt"
   },
   "promos": {
     "1.16.3-latest": "0.1.0",
