@@ -1,4 +1,4 @@
-package com.skullmangames.biohazard.common.item;
+package com.skullmangames.biohazard.item;
 
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -12,7 +12,7 @@ public class GreenHerb extends Item
         super(new Properties()
                 .group(ItemGroup.FOOD)
                 .food(new Food.Builder()
-                        .effect(() -> new EffectInstance(Effects.INSTANT_HEALTH, 1, 5), 1)
+                        .effect(() -> new EffectInstance(Effects.INSTANT_HEALTH, 1, 1/2), 1)
                         .build())
         );
     }

@@ -1,7 +1,7 @@
 package com.skullmangames.biohazard.util;
 
 import com.skullmangames.biohazard.Biohazard;
-import com.skullmangames.biohazard.common.item.GreenHerb;
+import com.skullmangames.biohazard.item.GreenHerb;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
