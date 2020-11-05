@@ -9,51 +9,72 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 public class CerberusModel<T extends CerberusEntity> extends EntityModel<T> {
 	private final ModelRenderer head;
 	private final ModelRenderer body;
+	private final ModelRenderer body_r1;
 	private final ModelRenderer upperBody;
+	private final ModelRenderer upperBody_r1;
 	private final ModelRenderer leg0;
 	private final ModelRenderer leg1;
 	private final ModelRenderer leg2;
 	private final ModelRenderer leg3;
 	private final ModelRenderer tail;
+	private final ModelRenderer tail_r1;
 
 	public CerberusModel() {
 		textureWidth = 64;
 		textureHeight = 32;
 
 		head = new ModelRenderer(this);
-		head.setRotationPoint(0.0F, 24.0F, 0.0F);
-		head.setTextureOffset(0, 0).addBox(-4.0F, -13.5F, -9.0F, 6.0F, 6.0F, 4.0F, 0.0F, false);
-		head.setTextureOffset(16, 14).addBox(-4.0F, -15.5F, -7.0F, 2.0F, 2.0F, 1.0F, 0.0F, false);
-		head.setTextureOffset(16, 14).addBox(0.0F, -15.5F, -7.0F, 2.0F, 2.0F, 1.0F, 0.0F, false);
-		head.setTextureOffset(0, 10).addBox(-2.5F, -10.5156F, -12.0F, 3.0F, 3.0F, 4.0F, 0.0F, false);
+		head.setRotationPoint(-0.8F, 9.8969F, -3.8F);
+		head.setTextureOffset(24, 20).addBox(-3.2F, -5.3969F, -3.95F, 6.0F, 6.0F, 5.0F, 0.0F, false);
+		head.setTextureOffset(0, 3).addBox(-3.2F, -7.3969F, 0.05F, 2.0F, 2.0F, 1.0F, 0.0F, false);
+		head.setTextureOffset(0, 0).addBox(0.8F, -7.3969F, 0.05F, 2.0F, 2.0F, 1.0F, 0.0F, false);
+		head.setTextureOffset(24, 12).addBox(-1.7F, -2.4125F, -6.95F, 3.0F, 3.0F, 5.0F, 0.0F, false);
 
 		body = new ModelRenderer(this);
 		body.setRotationPoint(0.0F, 24.0F, 0.0F);
-		body.setTextureOffset(18, 14).addBox(-4.0F, -12.0F, -1.0F, 6.0F, 9.0F, 6.0F, 0.0F, false);
+
+
+		body_r1 = new ModelRenderer(this);
+		body_r1.setRotationPoint(-1.0F, -7.5F, 2.0F);
+		body.addChild(body_r1);
+		setRotationAngle(body_r1, 1.3963F, 0.0F, 0.0F);
+		body_r1.setTextureOffset(0, 12).addBox(-3.0F, -3.5F, 0.45F, 6.0F, 9.0F, 6.0F, 0.0F, false);
 
 		upperBody = new ModelRenderer(this);
-		upperBody.setRotationPoint(0.0F, 24.0F, 0.0F);
-		upperBody.setTextureOffset(21, 0).addBox(-5.0F, -13.0F, -1.0F, 8.0F, 6.0F, 7.0F, 0.0F, false);
+		upperBody.setRotationPoint(-1.0F, 13.0F, -1.5F);
+
+
+		upperBody_r1 = new ModelRenderer(this);
+		upperBody_r1.setRotationPoint(0.0F, -0.5F, -2.0F);
+		upperBody.addChild(upperBody_r1);
+		setRotationAngle(upperBody_r1, 1.4835F, 0.0F, 0.0F);
+		upperBody_r1.setTextureOffset(0, 0).addBox(-4.0F, -1.5F, -3.5F, 8.0F, 5.0F, 7.0F, 0.0F, false);
 
 		leg0 = new ModelRenderer(this);
 		leg0.setRotationPoint(-2.5F, 16.0F, 7.0F);
-		leg0.setTextureOffset(0, 18).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		leg0.setTextureOffset(30, 0).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
 
 		leg1 = new ModelRenderer(this);
 		leg1.setRotationPoint(0.5F, 16.0F, 7.0F);
-		leg1.setTextureOffset(0, 18).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		leg1.setTextureOffset(30, 0).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
 
 		leg2 = new ModelRenderer(this);
 		leg2.setRotationPoint(-2.5F, 16.0F, -4.0F);
-		leg2.setTextureOffset(0, 18).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		leg2.setTextureOffset(30, 0).addBox(-1.0F, -1.0F, -1.0F, 2.0F, 9.0F, 2.0F, 0.0F, false);
 
 		leg3 = new ModelRenderer(this);
 		leg3.setRotationPoint(0.5F, 16.0F, -4.0F);
-		leg3.setTextureOffset(0, 18).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+		leg3.setTextureOffset(30, 0).addBox(-1.0F, -1.0F, -1.0F, 2.0F, 9.0F, 2.0F, 0.0F, false);
 
 		tail = new ModelRenderer(this);
 		tail.setRotationPoint(-1.0F, 12.0F, 8.0F);
-		tail.setTextureOffset(9, 18).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 8.0F, 2.0F, 0.0F, false);
+
+
+		tail_r1 = new ModelRenderer(this);
+		tail_r1.setRotationPoint(0.0F, 0.0F, 1.0F);
+		tail.addChild(tail_r1);
+		setRotationAngle(tail_r1, 0.1309F, 0.0F, 0.0F);
+		tail_r1.setTextureOffset(18, 12).addBox(-1.0F, -1.0F, -1.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
 	}
 
 	@Override
