@@ -1,8 +1,11 @@
 package com.skullmangames.biohazard;
 
-import com.skullmangames.biohazard.util.RegistryHandler;
+import com.skullmangames.biohazard.init.ModEntityTypes;
+import com.skullmangames.biohazard.init.ModItems;
+import com.skullmangames.biohazard.item.ModSpawnEggItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.EntityType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,10 +20,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.rmi.registry.Registry;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("biohazard")
+@Mod.EventBusSubscriber(modid = Biohazard.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Biohazard
 {
     // Directly reference a log4j logger.
@@ -38,7 +43,8 @@ public class Biohazard
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
-        RegistryHandler.Init();
+        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModEntityTypes.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -74,6 +80,11 @@ public class Biohazard
     public void onServerStarting(FMLServerStartingEvent event) {
         // do something when the server starts
         LOGGER.info("HELLO from server starting");
+    }
+
+    @SubscribeEvent
+    public static void onRegisterEntities(final RegistryEvent.Register<EntityType<?>> event) {
+        ModSpawnEggItem.initSpawnEggs();
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD

@@ -1,9 +1,11 @@
-Build: 1.16.3-0.1.0
+Build: 1.15.2-1.0.0
 
 	-New Item added: Green Herb
 	-New Item added: Red Herb
 	-New Item added: Blue Herb
 	-New Item added: Mixed Herbs (G+G)
 	-New Item added: Mixed Herbs (G+G+G)
+	-New Item added: Cerberus Spawn Egg
+	-New Mob added: Cerberus
 
 =========
