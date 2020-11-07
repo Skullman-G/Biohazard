@@ -2,11 +2,11 @@ package com.skullmangames.biohazard.client.renderer.entity.model;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
-import com.skullmangames.biohazard.entity.CerberusEntity;
+import com.skullmangames.biohazard.entity.DobermanEntity;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 
-public class CerberusModel<T extends CerberusEntity> extends EntityModel<T> {
+public class DobermanModel<T extends DobermanEntity> extends EntityModel<T> {
 	private final ModelRenderer head;
 	private final ModelRenderer body;
 	private final ModelRenderer body_r1;
@@ -19,7 +19,7 @@ public class CerberusModel<T extends CerberusEntity> extends EntityModel<T> {
 	private final ModelRenderer tail;
 	private final ModelRenderer tail_r1;
 
-	public CerberusModel() {
+	public DobermanModel() {
 		textureWidth = 64;
 		textureHeight = 32;
 

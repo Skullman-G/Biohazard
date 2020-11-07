@@ -2,6 +2,7 @@ package com.skullmangames.biohazard.util;
 
 import com.skullmangames.biohazard.Biohazard;
 import com.skullmangames.biohazard.client.renderer.entity.CerberusRenderer;
+import com.skullmangames.biohazard.client.renderer.entity.DobermanRenderer;
 import com.skullmangames.biohazard.init.ModEntityTypes;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -15,6 +16,7 @@ public class ClientEventBusSubscriber
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event)
     {
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.DOBERMAN.get(), DobermanRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.CERBERUS.get(), CerberusRenderer::new);
     }
 }

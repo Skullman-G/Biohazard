@@ -20,6 +20,10 @@ public class ModItems
     public static final RegistryObject<MixedHerbsGGGItem> MIXED_HERBS_GGG = ITEMS.register("mixed_herbs_ggg", MixedHerbsGGGItem::new);
 
     //SpawnEgg
+    public static final RegistryObject<ModSpawnEggItem> DOBERMAN_SPAWN_EGG = ITEMS.register("doberman_spawn_egg",
+            ()-> new ModSpawnEggItem(ModEntityTypes.DOBERMAN, 0x963200, 0x000000,
+                    new Item.Properties().group(ItemGroup.MISC)));
+
     public static final RegistryObject<ModSpawnEggItem> CERBERUS_SPAWN_EGG = ITEMS.register("cerberus_spawn_egg",
             ()-> new ModSpawnEggItem(ModEntityTypes.CERBERUS, 0x963200, 0x000000,
                     new Item.Properties().group(ItemGroup.MISC)));

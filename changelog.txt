@@ -5,7 +5,9 @@ Build: 1.15.2-1.0.0
 	-New Item added: Blue Herb
 	-New Item added: Mixed Herbs (G+G)
 	-New Item added: Mixed Herbs (G+G+G)
+	-New Item added: Doberman Spawn Egg
 	-New Item added: Cerberus Spawn Egg
+	-New Mob added: Doberman
 	-New Mob added: Cerberus
 
 =========

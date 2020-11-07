@@ -1,9 +1,11 @@
 {
-  "item.biohazard.green_herb": "Green Herb",
-  "item.biohazard.red_herb": "Red Herb",
+  "entity.biohazard.cerberus": "Cerberus",
+  "entity.biohazard.doberman": "Doberman",
   "item.biohazard.blue_herb": "Blue Herb",
+  "item.biohazard.cerberus_spawn_egg": "Cerberus Spawn Egg",
+  "item.biohazard.doberman_spawn_egg": "Doberman Spawn Egg",
+  "item.biohazard.green_herb": "Green Herb",
   "item.biohazard.mixed_herbs_gg": "Mixed Herbs (G+G)",
   "item.biohazard.mixed_herbs_ggg": "Mixed Herbs (G+G+G)",
-  "item.biohazard.cerberus_spawn_egg": "Cerberus Spawn Egg",
-  "entity.biohazard.cerberus": "Cerberus"
+  "item.biohazard.red_herb": "Red Herb"
 }
