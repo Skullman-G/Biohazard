@@ -17,6 +17,6 @@ public class ClientEventBusSubscriber
     public static void clientSetup(FMLClientSetupEvent event)
     {
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.DOBERMAN.get(), DobermanRenderer::new);
-        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.CERBERUS.get(), CerberusRenderer::new);
+        //RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.CERBERUS.get(), CerberusRenderer::new);
     }
 }
