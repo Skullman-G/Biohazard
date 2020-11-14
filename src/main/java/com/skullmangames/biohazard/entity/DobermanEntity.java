@@ -8,6 +8,9 @@ import net.minecraft.entity.ai.goal.LookRandomlyGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 
 public class DobermanEntity extends AnimalEntity {
@@ -29,6 +32,20 @@ public class DobermanEntity extends AnimalEntity {
     @Override
     public AgeableEntity createChild(AgeableEntity ageable) {
         return null;
+    }
+
+    protected SoundEvent getAmbientSound() { return SoundEvents.ENTITY_WOLF_AMBIENT; }
+
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
+        return SoundEvents.ENTITY_WOLF_HURT;
+    }
+
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.ENTITY_WOLF_DEATH;
+    }
+
+    protected float getSoundVolume() {
+        return 0.4F;
     }
 
     @Override

@@ -8,6 +8,9 @@ import net.minecraft.entity.merchant.villager.VillagerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 
 public class CerberusEntity extends MonsterEntity
@@ -36,6 +39,20 @@ public class CerberusEntity extends MonsterEntity
         this.targetSelector.addGoal(0, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, false));
         this.targetSelector.addGoal(0, new NearestAttackableTargetGoal<>(this, VillagerEntity.class, false));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, AnimalEntity.class, false));
+    }
+
+    protected SoundEvent getAmbientSound() { return SoundEvents.ENTITY_WOLF_GROWL; }
+
+    protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
+        return SoundEvents.ENTITY_WOLF_HURT;
+    }
+
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.ENTITY_WOLF_DEATH;
+    }
+
+    protected float getSoundVolume() {
+        return 0.4F;
     }
 
     @Override
