@@ -5,6 +5,7 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.skullmangames.biohazard.entity.DobermanEntity;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.util.math.MathHelper;
 
 public class DobermanModel<T extends DobermanEntity> extends EntityModel<T> {
 	private final ModelRenderer head;
@@ -31,21 +32,21 @@ public class DobermanModel<T extends DobermanEntity> extends EntityModel<T> {
 		head.setTextureOffset(24, 12).addBox(-1.7F, -2.4125F, -6.95F, 3.0F, 3.0F, 5.0F, 0.0F, false);
 
 		body = new ModelRenderer(this);
-		body.setRotationPoint(0.0F, 24.0F, 0.0F);
+		body.setRotationPoint(-1.0F, 15.0F, 3.0F);
 
 
 		body_r1 = new ModelRenderer(this);
-		body_r1.setRotationPoint(-1.0F, -7.5F, 2.0F);
+		body_r1.setRotationPoint(0.0F, -1.5F, 1.0F);
 		body.addChild(body_r1);
 		setRotationAngle(body_r1, 1.3963F, 0.0F, 0.0F);
-		body_r1.setTextureOffset(0, 12).addBox(-3.0F, -3.5F, 0.45F, 6.0F, 9.0F, 6.0F, 0.0F, false);
+		body_r1.setTextureOffset(0, 12).addBox(-3.0F, -4.9487F, -2.8517F, 6.0F, 10.0F, 6.0F, 0.0F, false);
 
 		upperBody = new ModelRenderer(this);
-		upperBody.setRotationPoint(-1.0F, 13.0F, -1.5F);
+		upperBody.setRotationPoint(-1.0F, 13.0F, -0.5F);
 
 
 		upperBody_r1 = new ModelRenderer(this);
-		upperBody_r1.setRotationPoint(0.0F, -0.5F, -2.0F);
+		upperBody_r1.setRotationPoint(0.0F, -0.5F, -3.0F);
 		upperBody.addChild(upperBody_r1);
 		setRotationAngle(upperBody_r1, 1.4835F, 0.0F, 0.0F);
 		upperBody_r1.setTextureOffset(0, 0).addBox(-4.0F, -1.5F, -3.5F, 8.0F, 5.0F, 7.0F, 0.0F, false);
@@ -79,7 +80,12 @@ public class DobermanModel<T extends DobermanEntity> extends EntityModel<T> {
 
 	@Override
 	public void setRotationAngles(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch){
-		//previously the render function, render code was moved to a method below
+		this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
+		this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
+		this.leg0.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+		this.leg1.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+		this.leg2.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+		this.leg3.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 	}
 
 	@Override

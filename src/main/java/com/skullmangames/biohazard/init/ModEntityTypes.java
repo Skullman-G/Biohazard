@@ -3,6 +3,7 @@ package com.skullmangames.biohazard.init;
 import com.skullmangames.biohazard.Biohazard;
 import com.skullmangames.biohazard.entity.CerberusEntity;
 import com.skullmangames.biohazard.entity.DobermanEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;

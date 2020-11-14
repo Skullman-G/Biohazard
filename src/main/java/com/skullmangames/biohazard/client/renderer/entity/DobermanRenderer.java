@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class DobermanRenderer extends MobRenderer<DobermanEntity, DobermanModel<DobermanEntity>> {
 
-    protected static final ResourceLocation TEXTURE = new ResourceLocation(Biohazard.MODID,
+    protected static final ResourceLocation DOBERMAN_TEXTURE = new ResourceLocation(Biohazard.MODID,
             "textures/entities/doberman/doberman.png");
 
     public DobermanRenderer(EntityRendererManager renderManagerIn) {
@@ -18,6 +18,6 @@ public class DobermanRenderer extends MobRenderer<DobermanEntity, DobermanModel<
 
     @Override
     public ResourceLocation getEntityTexture(DobermanEntity entity) {
-        return TEXTURE;
+        return DOBERMAN_TEXTURE;
     }
 }

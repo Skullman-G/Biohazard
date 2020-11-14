@@ -1,10 +1,10 @@
 {
   "homepage": "https://discord.com/channels/705783531414093864/773446915084779550",
   "1.15.2": {
-    "<1.0.0>": "https://raw.githubusercontent.com/Skullman-G/Biohazard/main/changelog.txt"
+    "<0.1.0>": "https://raw.githubusercontent.com/Skullman-G/Biohazard/main/changelog.txt"
   },
   "promos": {
-    "1.15.2-latest": "1.0.0",
-    "1.15.2-recommended": "1.0.0"
+    "1.15.2-latest": "0.1.0",
+    "1.15.2-recommended": "0.1.0"
   }
 }
